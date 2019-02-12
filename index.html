@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Open Maptiles</title>
+    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.js'></script>
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.css' rel='stylesheet' />   
+    <style>
+        body { margin:0; padding:0; }
+        #map { position:absolute; top:0; bottom:0; width:100%; }
+    </style>
+    <div id='map'></div>
+</head>
+
+<body>
+        <script>
+            let map = new mapboxgl.Map({
+                container: 'map',
+                style: 'https://maps.tilehosting.com/styles/basic/style.json?key=hrA06HCLQ11mNh2ByETP',
+                center: [103.80, 1.35],
+                zoom: 12
+            })
+            map.addControl(new mapboxgl.NavigationControl())
+        </script>
+</body>
+
+</html>
